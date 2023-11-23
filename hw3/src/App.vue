@@ -7,6 +7,12 @@
   </nav>
   </div>
   <router-view/>
+  <div class="footer">
+    <footer>
+      <a> RAM OÜ </a>
+    </footer>
+  </div>
+
 </template>
 
 <style>
@@ -58,6 +64,28 @@ input[type='file'] {
   color: rgba(0, 0, 0, 0)
 }
 
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color:#EAD7BB;;
+  box-shadow: 0px 0px 14px 0px #EAD7BB;
+  text-align: left;
+  font-size: 25px;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.footer a{
+  color: #113946;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
 
 .header:hover{
   background-color: #BCA37F;
