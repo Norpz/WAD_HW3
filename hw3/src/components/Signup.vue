@@ -1,34 +1,73 @@
 <template>
   <div class="signup">
-    <body class="login">
-    <form class="loginForm" action="index.html" method="POST">
+    <form class="loginForm" @submit.prevent="submitForm">
       <div class="formHeader">
         <p><strong>Welcome to RAM OÜ</strong></p>
-        <p>Sign in with your username and password</p>
+        <p>Sign up with your email and password</p>
       </div>
       <div class="formBody">
-        <input type="text" name="username" placeholder="Username" required>
+        <label for="email">Email </label>
+        <input type="text" name="email" placeholder="Email" required>
         <br><br>
-        <input type="password" name="password" placeholder="Password" required>
+        <label for="password">Password </label>
+        <input type="password" id="password" placeholder="Password" required v-model="password" @input="validatePassword">
+
+        <div v-if="!isPasswordValid" class="validation-message">
+          <p><strong> Password is not valid. Please follow these conditions: </strong></p>
+          <ul>
+            <li>Password should be at least 8 characters and less than 15 characters.</li>
+            <li>Should include at least one uppercase alphabet character.</li>
+            <li>Should include at least two lowercase alphabet characters.</li>
+            <li>Should include at least one numeric value.</li>
+            <li>Should start with an uppercase alphabet.</li>
+            <li>Should include the character "_"</li>
+          </ul>
+        </div>
+
       </div>
       <div>
         <br>
-        <button type="submit">Login</button><br>
-        <a>Forget password</a><br>
-        <a>Create an account</a>
+        <button type="submit">Signup</button><br>
       </div>
     </form>
-    </body>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Signup',
-  props: {
-    msg: String
+  data() {
+    return {
+      password: '',
+      isPasswordValid: true
+    };
+  },
+  methods: {
+    validatePassword() {
+      // Regular expressions for each condition
+      const lengthRegex = /^.{8,15}$/;
+      const uppercaseRegex = /[A-Z]/;
+      const lowercaseRegex = /[a-z]/g;
+      const numericRegex = /\d/;
+      const startsWithUppercase = /^[A-Z]/;
+      const includesUnderscore = /_/;
+
+      this.isPasswordValid =
+          lengthRegex.test(this.password) &&
+          uppercaseRegex.test(this.password) &&
+          (this.password.match(lowercaseRegex) || []).length >= 2 &&
+          numericRegex.test(this.password) &&
+          startsWithUppercase.test(this.password) &&
+          includesUnderscore.test(this.password);
+    },
+    submitForm() {
+      // Handle form submission if password is valid
+      if (this.isPasswordValid) {
+        // Your form submission logic here
+        console.log('Password is valid. Submitting the form.');
+      }
+    }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -37,7 +76,10 @@ export default {
   box-sizing: border-box;
   font-family: sans-serif;
 }
-body{
+ul{
+  list-style: none;
+}
+.signup{
   line-height: 1.6;
   margin: 20px;
   min-width: 300px;
@@ -152,8 +194,13 @@ h1 ~ p{
 }
 .dropdown-content a:hover {
   background-color: #ddd;
-
 }
+
+.validation-message {
+  margin-top: 10px;
+  color: red;
+}
+
 @media (min-width: 600px) {
   .loginForm {
     display: flex;

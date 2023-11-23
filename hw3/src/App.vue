@@ -1,15 +1,13 @@
 <template>
-  <div class="header">
   <nav>
     <router-link to="/">Signup</router-link>
     <router-link to="/main">Main</router-link>
     <router-link to="/addPost">Add Post</router-link>
   </nav>
-  </div>
   <router-view/>
-    <footer class="footer">
-      <a> RAM OÜ </a>
-    </footer>
+  <footer class="footer">
+    <a> Copyright © 2023 RAM OÜ </a>
+  </footer>
 
 </template>
 
@@ -52,16 +50,6 @@ nav a.router-link-exact-active {
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
-textarea {
-  resize: none;
-  text-align: left;
-  vertical-align: top;
-}
-
-input[type='file'] {
-  color: rgba(0, 0, 0, 0)
-}
-
 .footer{
   align-items: center;
   justify-content: space-between;
@@ -80,30 +68,10 @@ input[type='file'] {
 .footer a{
   color: #113946;
   text-decoration: none;
-  cursor: pointer;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   text-align: center;
 }
 
-.header:hover{
-  background-color: #BCA37F;
-  box-shadow: 0px 0px 14px 0px #a1947d;
-}
-
-.header > .headerText a:hover{
-  color: #57747e;
-}
-
-.header img{
-  max-width: 40%;
-  max-height: 40%;
-  order: 1;
-  float: right;
-}
-
-.headerText{
-  order: 0;
-}
 </style>
 <script setup>
 </script>

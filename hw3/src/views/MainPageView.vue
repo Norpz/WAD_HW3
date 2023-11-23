@@ -1,17 +1,37 @@
 <template>
-  <div class="main">
-    <Main msg="Welcome to Your Vue.js App"/>
+  <div class="main-page">
+    <Main v-for="post in posts" :key="post.id" :post-id="post.id" />
+    <button @click="resetLikes">Reset Likes</button> <!-- Button to reset all likes -->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Main from '@/components/Main.vue'
+import { ref, onMounted } from 'vue';
+import { useStore } from 'vuex';
+import Main from '@/components/Main.vue';
 
 export default {
-  name: 'MainPageView',
   components: {
     Main
+  },
+  setup() {
+    const store = useStore();
+    const posts = ref([]);
+
+    onMounted(async () => {
+      await store.dispatch('fetchPosts');
+      posts.value = store.state.posts;
+    });
+
+    const resetLikes = () => {
+      store.commit('resetLikes'); // Trigger the 'resetAllLikes' mutation
+    };
+
+    return {
+      posts,
+      resetLikes
+    };
   }
-}
+};
 </script>
