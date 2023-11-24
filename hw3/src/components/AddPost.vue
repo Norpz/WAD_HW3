@@ -11,7 +11,7 @@ export default {
   <body class="addPost">
   <form class="addPostForm" action="index.html" method="POST" id="postForm">
     <div>
-      <label for="textarea">Post body</label>
+      <label for="textarea">Post body   </label>
       <textarea id="textarea" name="textarea" placeholder="textarea" rows="4" cols="20"></textarea>
 
     </div>
@@ -33,12 +33,12 @@ export default {
   font-family: sans-serif;
 }
 
-body{
+/* body{
   line-height: 1.6;
   margin: 20px;
   min-width: 300px;
   background-color: #FFF2D8;
-}
+} */
 
 footer{
   clear:both;
@@ -59,12 +59,13 @@ footer{
 }
 
 .login form, .addPost form{
-  padding: 10px 15px;
+  padding: 15px 15px;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: #baf3f8;
+  margin-top: 50px;
+  background-color: #FFF2D8;
   text-align: center;
-  box-shadow: 0px 0px 14px 0px rgba(85, 238, 255, 0.75);
+  box-shadow: 0px 0px 14px 0px #EAD7BB;
   border-radius: 15px 15px 15px 15px;
 }
 div button {

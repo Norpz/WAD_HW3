@@ -81,9 +81,10 @@ ul{
 }
 .signup{
   line-height: 1.6;
-  margin: 20px;
+  margin: 50px;
   min-width: 300px;
   background-color: #FFF2D8;
+  border-radius: 10px;
 }
 footer{
   clear:both;

@@ -20,6 +20,10 @@
   color: #2c3e50;
 }
 
+body {
+  background-color: #d7c09b;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -29,7 +33,7 @@ nav {
   margin-top: 5%;
   padding-left: 2%;
   padding-right: 2%;
-  background-color:#EAD7BB;;
+  background-color:#ecd3ae;;
   box-shadow: 0px 0px 14px 0px #EAD7BB;
   text-align: left;
   font-size: 25px;

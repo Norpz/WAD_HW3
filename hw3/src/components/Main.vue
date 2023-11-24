@@ -50,7 +50,7 @@ body{
   line-height: 1.6;
   margin: 20px;
   min-width: 300px;
-  background-color: #FFF2D8;
+  background-color: #ffe6b5;
 
 }
 
@@ -122,16 +122,15 @@ input[type='file'] {
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
-.header:hover{
+/* .header:hover{
   background-color: #BCA37F;
-  box-shadow: 0px 0px 14px 0px #a1947d;
+  box-shadow: 0px 0px 14px 0px #c3b59c;
 }
 
 .header > .headerText a:hover{
   color: #57747e;
 
 }
-
 
 .header img{
   max-width: 40%;
@@ -142,7 +141,7 @@ input[type='file'] {
 
 .headerText{
   order: 0;
-}
+} */
 
 
 .loginForm a{
@@ -286,12 +285,6 @@ h1 ~ p{
   margin-right: 10px;
 }
 
-/*.sidebar-left,
-.sidebar-right {
-    width: 20%;
-    background-color: #EAD7BB;
-    height: 100vh;
-}*/
 @media (min-width: 600px) {
   .loginForm {
     display: flex;
