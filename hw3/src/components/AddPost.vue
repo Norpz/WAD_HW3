@@ -33,32 +33,9 @@ export default {
   font-family: sans-serif;
 }
 
-/* body{
-  line-height: 1.6;
-  margin: 20px;
-  min-width: 300px;
-  background-color: #FFF2D8;
-} */
 
-footer{
-  clear:both;
-  text-align: center;
-  font-weight: bold;
-  justify-content: space-between;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
-  padding-left: 2%;
-  padding-right: 2%;
-  background-color:#EAD7BB;;
-  box-shadow: 0px 0px 14px 0px #EAD7BB;
-  color: #113946;
-  font-size: 25px;
-  border-radius: 15px 15px 15px 15px;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-}
 
-.login form, .addPost form{
+.addPost form{
   padding: 15px 15px;
   margin-left: 5%;
   margin-right: 5%;
@@ -86,37 +63,6 @@ input[type='file'] {
   color: rgba(0, 0, 0, 0)
 }
 
-.headerText a{
-  color: #113946;
-  text-decoration: none;
-  cursor: pointer;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-}
-
-.header > .headerText a:hover{
-  color: #57747e;
-}
-
-.header img{
-  max-width: 40%;
-  max-height: 40%;
-  order: 1;
-  float: right;
-}
-
-.loginForm a{
-  font: bold 16px/30px Arial, sans-serif;
-  color: rgb(0, 13, 191);
-}
-
-h1 + p {
-  font-weight: bold;
-}
-
-h1 ~ p{
-  color: #113946;
-}
-
 .addPostForm{
   display: flex;
   flex-direction: column;
@@ -140,39 +86,12 @@ h1 ~ p{
   border-radius: 3px;
 }
 
-.user-profile img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.post-image img {
-  width: 100%;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 5px 6px;
-  text-decoration: none;
-  color: #333;
-  font-size: small;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
 
 @media (min-width: 600px) {
-  .loginForm {
+  .addPost {
     display: flex;
     flex-direction: column;
   }
-  .header{
-    display: flex;
-    flex-direction: row;
-  }
+
 }
 </style>
